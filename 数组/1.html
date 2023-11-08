@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body></body>
+  <script>
+    /**
+     * @param {number[]} nums
+     * @param {number} target
+     * @return {number[]}
+     */
+    // TODO 方法一（有些问题未排除）暴力破解 （每次都是拿两个数相加，花费O(1)的时间，只能获取O(1)一个数）
+    // var twoSum = function (nums, target) {
+    //     let indexList = []
+    //     for(let i = 0; i< nums.length;i++){
+    //         const index_j = i+1
+    //         if(i === nums.length-1){
+    //             return 0
+    //         }
+    //         for(let j = index_j; j<nums.length;j++){
+    //             let count = nums[i] + nums[j]
+    //             if( count === target){
+    //                 indexList.push(i)
+    //                 indexList.push(j)
+    //                 return indexList
+    //             }
+    //         }
+    //     }
+    // };
+    // twoSum([3,2,4],6)
+
+    // TODO 方法二  哈希解法  采用哈希表，每次都会拿当前值和哈希表对比。 花费O(1)的时间，可以找到O(n)的数据
+    // var twoSum = function (nums, target) {
+    //   const map = new Map();
+    //   for (let i = 0; i < nums.length; i++) {
+    //     if (map.has(target - nums[i])) {
+    //       return [map.get(target - nums[i]), i];
+    //     }
+    //     map.set(nums[i], i);
+    //   }
+    // };
+
+    // console.log(twoSum([3, 3], 6));
+  </script>
+</html>
