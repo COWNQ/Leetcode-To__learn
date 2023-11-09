@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    //
+
+    /**
+     * @param {number} n
+     * @return {string[]}
+     */
+    // var fizzBuzz = function (n) {
+    //   // 变化量n  变量n， answer下边 n-1
+    //   let number = 1;
+    //   let answer = [];
+    //   // while循环，
+    //   while (number <= n) {
+    //     if (number % 3 === 0 && number % 5 === 0) {
+    //       answer[number - 1] = "FizzBuzz";
+    //     } else if (number % 3 === 0) {
+    //       answer[number - 1] = "Fizz";
+    //     } else if (number % 5 === 0) {
+    //       answer[number - 1] = "Buzz";
+    //     } else {
+    //       answer[number - 1] = number + "";
+    //     }
+    //     number++;
+    //   }
+    //   console.log(answer);
+    //   console.log(typeof answer[0]);
+    //   return answer;
+    // };
+
+    // TODO
+    var fizzBuzz = function (n) {
+      let answers = [];
+      let i = 1;
+      while (i <= n) {
+        answers.push(
+          i % 3 === 0
+            ? i % 5 === 0
+              ? "FizzBuzz"
+              : "Fizz"
+            : i % 5 === 0
+            ? "Buzz"
+            : i.toString()
+        );
+        i++;
+      }
+      console.log(answers);
+      return answers;
+    };
+
+    fizzBuzz(18);
+  </script>
+</html>
