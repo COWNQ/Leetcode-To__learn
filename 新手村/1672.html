@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /**
+     * @param {number[][]} accounts
+     * @return {number}
+     */
+    // TODO 解法一
+    // var maximumWealth = function (accounts) {
+    //   const acclength = accounts.length;
+    //   let moneyArray = [];
+    //   for (let i = 0; i < acclength; i++) {
+    //     //获取每个人的资产
+    //     const everybodyHavaMoney = accounts[i];
+    //     let moneySum = 0;
+    //     for (let j = 0; j < everybodyHavaMoney.length; j++) {
+    //       moneySum += everybodyHavaMoney[j];
+    //       if (j === everybodyHavaMoney.length - 1) {
+    //         moneyArray.push(moneySum);
+    //       }
+    //     }
+    //   }
+    //   const maxmomey = Math.max(...moneyArray);
+    //   const personMax = moneyArray.indexOf(Math.max(...moneyArray)) + 1;
+    //   console.log(maxmomey);
+    //   return maxmomey;
+    // };
+
+    // TODO
+    // var maximumWealth = function (accounts) {
+    //   debugger;
+    //   let maxWealth = -Number.MAX_VALUE;
+    //   for (let account of accounts) {
+    //     maxWealth = Math.max(
+    //       maxWealth,
+    //       account.reduce((a, b) => a + b)
+    //     );
+    //   }
+
+    //   return maxWealth;
+    // };
+
+    // TODO
+    // var maximumWealth = function (accounts) {
+    //   let accountsList = [];
+    //   for (let account of accounts) {
+    //     accountsList.push(account.reduce((a, b) => a + b));
+    //   }
+    //   return Math.max(...accountsList);
+    // };
+
+    maximumWealth([
+      [1, 5],
+      [7, 3],
+      [3, 5],
+    ]);
+  </script>
+</html>
