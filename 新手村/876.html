@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /**
+     * Definition for singly-linked list.
+     * function ListNode(val, next) {
+     *     this.val = (val===undefined ? 0 : val)
+     *     this.next = (next===undefined ? null : next)
+     * }
+     */
+    /**
+     * @param {ListNode} head
+     * @return {ListNode}
+     */
+    // Line 36 in solution.js  throw new TypeError(__serialize__(ret) + " is not valid value for the expected return type ListNode");
+    // TODO
+    var middleNode = function (head) {
+      let headlength = head.length;
+
+      let getTag =
+        headlength % 2 === 0 ? headlength / 2 + 1 : (headlength + 1) / 2;
+      let numindex = getTag - 1;
+      let ListNode = [];
+      for (let i = numindex; i < headlength; i++) {
+        ListNode.push(head[i]);
+      }
+      console.log(ListNode);
+      return ListNode;
+    };
+
+    middleNode([1, 2, 3, 4, 5, 6]);
+  </script>
+</html>

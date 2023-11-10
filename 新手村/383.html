@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /**
+     * @param {string} ransomNote
+     * @param {string} magazine
+     * @return {boolean}
+     */
+    // TODO
+    var canConstruct = function (ransomNote, magazine) {
+      const ranlangth = ransomNote.length;
+      debugger;
+      for (let i = 0; i < ranlangth; i++) {
+        let deleteIndex = magazine.indexOf(ransomNote[i]);
+        if (deleteIndex >= 0) {
+          magazine =
+            magazine.slice(0, deleteIndex) + magazine.slice(deleteIndex + 1);
+        } else {
+          return false;
+        }
+      }
+      return true;
+    };
+    // TODO
+    // var canConstruct = function (ransomNote, magazine) {
+    //   const m = ransomNote.length;
+    //   const n = magazine.length;
+    //   if (m > n) {
+    //     return false;
+    //   }
+    //   for (let i = 0; i < m; i++) {
+    //     const char = ransomNote[i];
+    //     let index = magazine.indexOf(char);
+    //     if (index === -1) {
+    //       return false;
+    //     } else {
+    //       magazine = magazine.slice(index + 1);
+    //     }
+    //   }
+    //   console.log(true);
+    //   return true;
+    // };
+
+    canConstruct("aasdg", "asasdsb");
+  </script>
+</html>
